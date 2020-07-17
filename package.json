@@ -1,0 +1,22 @@
+{
+  "name": "mirador-webpack-integration",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "webpack": "webpack --config webpack/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^3.6.0",
+    "mirador": "^3.0.0-rc.4",
+    "mirador-image-tools": "^0.8.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
