@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "esbuild": "esbuild src/index.js --bundle --define:process.env.NODE_ENV=\\\"production\\\" --outfile=dist/esbuild.js --external:domain --minify",
     "parcel": "parcel parcel/index.html",
     "webpack": "webpack --config webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^3.6.0",
+    "esbuild": "^0.8.21",
     "mirador": "^3.0.0",
     "mirador-image-tools": "^0.10.0",
     "parcel-bundler": "^1.12.4",
