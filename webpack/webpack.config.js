@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   resolve: {
     fallback: {
-      "url:": require.resolve("url/")
+      "url": require.resolve("url/")
     }
   },
   entry: './src/index.js',
