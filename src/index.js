@@ -1,4 +1,4 @@
-import Mirador from 'mirador-video/dist/es/src/index';
+import Mirador from 'mirador/dist/es/src/index';
 import annotationPlugins from 'mirador-annotation-editor';
 import LocalStorageAdapter from 'mirador-annotation-editor/es/LocalStorageAdapter';
 
