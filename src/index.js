@@ -1,5 +1,6 @@
 import Mirador from 'mirador/dist/es/src/index';
-import { miradorImageToolsPlugin } from 'mirador-image-tools';
+import annotationPlugins from 'mirador-annotation-editor';
+import LocalStorageAdapter from 'mirador-annotation-editor/es/LocalStorageAdapter';
 
 const config = {
   id: 'demo',
@@ -15,8 +16,13 @@ const config = {
       },
     },
   },
+  annotation: {
+    adapter: (canvasId) => new LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`),
+    // adapter: (canvasId) => new AnnototAdapter(canvasId, endpointUrl),
+    exportLocalStorageAnnotations: false, // display annotation JSON export button
+  },
 };
 
 Mirador.viewer(config, [
-  ...miradorImageToolsPlugin,
+  ...annotationPlugins,
 ]);
