@@ -6,10 +6,10 @@ This repository is designed to show integrating Mirador 3 with modern frontend b
 
 You will likely need to have at least the following dependencies available in your `package.json`.
 
- - `mirador`
+ - `mirador-video` (custom Mirador with video support for annotation)
  - `react`
  - `react-dom`
- - `mirador-image-tools` - A plugin just to test plugin integration
+ - `mirador-annotation-edition`
 
 ### Webpack
 
