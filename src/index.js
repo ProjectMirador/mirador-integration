@@ -1,18 +1,17 @@
 import Mirador from 'mirador/dist/es/src/index';
-import annotationPlugins from 'mirador-annotation-editor';
-import LocalStorageAdapter from 'mirador-annotation-editor/es/LocalStorageAdapter';
+import annotationPlugins from 'mirador-annotations';
+import LocalStorageAdapter from 'mirador-annotations/es/LocalStorageAdapter';
 
 const config = {
   id: 'demo',
-  windows: [{
-    imageToolsEnabled: true,
-    imageToolsOpen: true,
-    manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
-  }],
+    catalog: [
+        { manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest' },
+        { manifestId: 'https://files.tetras-libre.fr/dev/Clock/manifest.json'}
+    ],
   theme: {
     palette: {
       primary: {
-        main: '#1967d2',
+        main: '#6e8678',
       },
     },
   },
