@@ -5,13 +5,15 @@
   "scripts": {
     "parcel": "parcel parcel/index.html",
     "webpack": "webpack --config webpack/webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "clean-deps": "rm -rf node_modules package-lock.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^3.6.0",
-    "mirador": "npm:mirador-video@1.0.6",
+    "mirador": "4.0.0-alpha.2",
     "mirador-annotations": "npm:mirador-annotation-editor@1.0.31",
     "parcel-bundler": "^1.12.4",
     "react": "^18.0.0",
