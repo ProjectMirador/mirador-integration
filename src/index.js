@@ -11,7 +11,7 @@ const config = {
   theme: {
     palette: {
       primary: {
-        main: '#6e8678',
+        main: '#1967d2',
       },
     },
   },

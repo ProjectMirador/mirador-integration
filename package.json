@@ -1,7 +1,7 @@
 {
-  "name": "mirador-integration-scene-video",
+  "name": "mirador-integration",
   "version": "0.0.0",
-  "description": "Integration of Mirador with SCENE plugins",
+  "description": "Integration of Mirador with some plugins",
   "scripts": {
     "parcel": "parcel parcel/index.html",
     "webpack": "webpack --config webpack/webpack.config.js",
