@@ -35,6 +35,7 @@
     "babel-plugin-macros": "^3.0.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "html-webpack-plugin": "^4.5.0",
+    "svg-inline-loader": "^0.8.2",
     "webpack-dev-server": "^3.11.0"
   },
   "overrides": {
