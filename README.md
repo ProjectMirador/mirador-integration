@@ -1,28 +1,27 @@
 ## Integrating Mirador
 
-This repository is designed to show integrating Mirador 3 with modern frontend build systems.
+This repository is designed to show integrating Mirador 4 with modern frontend build systems.
+
+We demonstrate the use of both our ES Module and packged CJS/CDN (served from unpkg) builds. See `index.html` and `index-cjs.html`:
+```
+npm run serve
+```
+```
+npm run serve-cjs
+```
+
+The pages will load at `http://localhost:1234`.
+
+In order to integrate Mirador with any plugins, you need to use our ES Module build.
+Refer to `index.js` for this setup -- here we integrate the `mirador-image-tools` plugin.
 
 ### Dependencies
 
-You will likely need to have at least the following dependencies available in your `package.json`.
-
+In order to work directly with the Mirador code to integrate existing or custom plugins, you will need to have at least the following dependencies available in your `package.json`.
  - `mirador`
  - `react`
  - `react-dom`
- - `mirador-image-tools` - A plugin just to test plugin integration
 
-### Webpack
+In this project we also include `mirador-image-tools` for demonstration.
 
-See `./webpack` for a basic webpack setup for Mirador 3 + a plugin.
-
-```sh
-npm run webpack
-```
-
-### Parcel
-
-See `./parcel`, but essentially it is just an html file referencing the JavaScript.
-
-```sh
-npm run parcel
-```
+We also include `parcel`, which is a simple package that serves up our example HTML pages here. It would most likely not be used in a real application.
