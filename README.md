@@ -2,12 +2,12 @@
 
 This repository is designed to show integrating Mirador 4 with modern frontend build systems.
 
-We demonstrate the use of both our ES Module and packged CJS/CDN (served from unpkg) builds. See `index.html` and `index-cjs.html`:
+We demonstrate the use of both our ES Module and packged UMD/CDN (served from unpkg) builds. See `index.html` and `index-umd.html`:
 ```
 npm run serve
 ```
 ```
-npm run serve-cjs
+npm run serve-umd
 ```
 
 The pages will load at `http://localhost:1234`.
@@ -21,6 +21,11 @@ In order to work directly with the Mirador code to integrate existing or custom 
  - `mirador`
  - `react`
  - `react-dom`
+ - `react-i18next`
+ - `@emotion/react`
+ - `@emotion/styled`
+ - `@mui/material`
+ - `@mui/system`
 
 In this project we also include `mirador-image-tools` for demonstration.
 
