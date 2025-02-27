@@ -1,7 +1,7 @@
 // Import Mirador from node_modules
 import Mirador from 'mirador';
-// TODO: add plugin back once the plugin is on M4
-// import { miradorImageToolsPlugin } from 'mirador-image-tools';
+import { miradorImageToolsPlugin } from 'mirador-image-tools';
+
 Mirador.viewer({
     id: 'demo',
     windows: [{
@@ -14,6 +14,7 @@ Mirador.viewer({
             primary: {
                 main: '#1967d2',
             },
+            
         },
     },
-});
+}, [...miradorImageToolsPlugin]);
