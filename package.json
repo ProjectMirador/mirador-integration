@@ -1,24 +1,31 @@
 {
   "name": "mirador-integration",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Examples of integrating Mirador 4 with plugins",
   "private": true,
   "scripts": {
-    "parcel": "parcel parcel/index.html",
-    "webpack": "webpack --config webpack/webpack.config.js",
+    "serve": "rm -rf dist .parcel-cache && parcel index.html",
+    "serve-umd": "rm -rf dist .parcel-cache && parcel index-umd.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "css-loader": "^3.6.0",
-    "mirador": "^3.3.0",
-    "mirador-image-tools": "^0.11.0",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^7.x",
+    "@mui/system": "^7.x",
+    "mirador": "4.0.0-alpha.17",
+    "mirador-image-tools": "file:../mirador-image-tools/mirador-image-tools-1.0.0-alpha.3.tgz",
+    "mirador-dl-plugin": "file:../mirador-dl-plugin/mirador-dl-plugin-1.0.0-alpha.4.tgz",
+    "mirador-share-plugin": "file:../mirador-share-plugin/mirador-share-plugin-1.0.0-alpha.4.tgz",
+    "prop-types": "^15.7.2",
+    "parcel": "^2.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^13.0.0 || ^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
