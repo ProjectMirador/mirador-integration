@@ -1,6 +1,10 @@
 // Import Mirador from node_modules
 import Mirador from 'mirador';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
+import miradorSharePlugin from 'mirador-share-plugin';
+import miradorShareDialogPlugin from 'mirador-share-plugin';
+import miradorDownloadPlugin from 'mirador-dl-plugin';
+import miradorDownloadDialogPlugin  from 'mirador-dl-plugin';
 
 Mirador.viewer({
     id: 'demo',
@@ -17,4 +21,15 @@ Mirador.viewer({
             
         },
     },
-}, [...miradorImageToolsPlugin]);
+}, [...miradorImageToolsPlugin,
+    {
+        ...miradorSharePlugin,
+        target: 'WindowTopBarShareMenu',
+    },
+    miradorShareDialogPlugin,
+    {
+        ...miradorDownloadPlugin,
+        target: 'WindowTopBarShareMenu',
+    },
+    miradorDownloadDialogPlugin,
+]);
