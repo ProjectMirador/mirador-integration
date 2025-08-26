@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "UNLICENSE",
+  "license": "Apache-2.0",
   "dependencies": {
     "css-loader": "^3.6.0",
     "mirador": "^3.3.0",
