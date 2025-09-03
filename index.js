@@ -1,17 +1,10 @@
 // Import Mirador from node_modules
 import Mirador from 'mirador';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
-import {  miradorSharePlugin, miradorShareDialogPlugin } from 'mirador-share-plugin';
-import { miradorDownloadPlugin, miradorDownloadDialogPlugin } from 'mirador-dl-plugin'; 
-
-
-console.log({
-  miradorImageToolsPlugin,
-  miradorSharePlugin,
-  miradorShareDialogPlugin,
-  miradorDownloadPlugin,
-  miradorDownloadDialogPlugin,
-});
+import { miradorSharePlugin, miradorShareDialogPlugin } from 'mirador-share-plugin';
+import AnotherCustomMenuItem from './AnotherCustomMenuItem.jsx';
+import CustomMenuItem from './CustomMenuItem.jsx';
+import CustomMenuComponent from './CustomMenuComponent.jsx';
 
 Mirador.viewer({
     id: 'demo',
@@ -30,9 +23,10 @@ Mirador.viewer({
     },
 }, [
     ...miradorImageToolsPlugin,
-    miradorSharePlugin,
+    {...miradorSharePlugin, target: 'CustomMenuComponent' },
     miradorShareDialogPlugin,
-    miradorDownloadPlugin,
-    miradorDownloadDialogPlugin,
+    AnotherCustomMenuItem,
+    CustomMenuItem,
+    CustomMenuComponent,
 ]);
 
