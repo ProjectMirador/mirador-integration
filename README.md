@@ -27,6 +27,10 @@ In order to work directly with the Mirador code to integrate existing or custom 
  - `@emotion/styled`
  - `@mui/material`
  - `@mui/system`
+ -  `mirador-image-tools` - A plugin just to test plugin integration
+- `mirador-share-plugin` - Another plugin to test plugin integration
+
+
 
 We also include `parcel`, which is a simple package that serves up our example HTML pages here. It would most likely not be used in a real application.
 
