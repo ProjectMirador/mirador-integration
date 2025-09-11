@@ -1,13 +1,13 @@
 import Mirador from 'mirador/dist/es/src/index';
-import { miradorImageToolsPlugin } from 'mirador-image-tools';
+import annotationPlugins from 'mirador-annotations';
+import LocalStorageAdapter from 'mirador-annotations/es/annotationAdapter/LocalStorageAdapter';
 
 const config = {
   id: 'demo',
-  windows: [{
-    imageToolsEnabled: true,
-    imageToolsOpen: true,
-    manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
-  }],
+    catalog: [
+        { manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest' },
+        { manifestId: 'https://files.tetras-libre.fr/dev/Clock/manifest.json'}
+    ],
   theme: {
     palette: {
       primary: {
@@ -15,8 +15,13 @@ const config = {
       },
     },
   },
+  annotation: {
+    adapter: (canvasId) => new LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`),
+    // adapter: (canvasId) => new AnnototAdapter(canvasId, endpointUrl),
+    exportLocalStorageAnnotations: false, // display annotation JSON export button
+  },
 };
 
 Mirador.viewer(config, [
-  ...miradorImageToolsPlugin,
+  ...annotationPlugins,
 ]);

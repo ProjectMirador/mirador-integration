@@ -1,24 +1,48 @@
 {
   "name": "mirador-integration",
   "version": "0.0.0",
-  "description": "",
-  "private": true,
+  "description": "Integration of Mirador with some plugins",
   "scripts": {
     "parcel": "parcel parcel/index.html",
     "webpack": "webpack --config webpack/webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "clean-deps": "rm -rf node_modules package-lock.json"
   },
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
     "css-loader": "^3.6.0",
-    "mirador": "^3.3.0",
-    "mirador-image-tools": "^0.11.0",
+    "mirador": "4.0.0-alpha.2",
+    "mirador-annotations": "npm:mirador-annotation-editor@1.0.31",
     "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.70.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.7",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-regenerator": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^9.1.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-macros": "^3.0.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "html-webpack-plugin": "^4.5.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "overrides": {
+    "mirador": {
+      "react-dnd": "^16.0.1"
+    }
   }
 }
