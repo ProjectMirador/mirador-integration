@@ -13,16 +13,16 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^7.x",
-    "@mui/system": "^7.x",
-    "mirador": "file:../mirador/mirador-4.0.0-rc.1.6.tgz",
-    "mirador-share-plugin": "file:../mirador-share-plugin/mirador-share-plugin-1.0.0-rc.1.2.tgz",
-    "mirador-image-tools": "1.0.0-rc.1",
+    "@mui/material": "^7.0.0",
+    "@mui/system": "^7.0.0",
+    "mirador": "4.0.0",
+    "mirador-image-tools": "1.0.0",
+    "mirador-share-plugin": "1.0.0",
     "prop-types": "^15.7.2",
     "parcel": "^2.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-i18next": "^13.0.0 || ^14.0.0 || ^15.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.0.0"
   },
   "devDependencies": {
     "process": "^0.11.10"
