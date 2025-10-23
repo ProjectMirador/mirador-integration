@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Mirador: UMD / CDN</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script src="https://unpkg.com/mirador@4.0.0/dist/mirador.min.js"></script>
+    <script>
+        // Mirador is now available as a global variable
+        Mirador.viewer({
+            id: 'demo',
+            windows: [{
+                imageToolsEnabled: true,
+                imageToolsOpen: true,
+                manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
+            }],
+            theme: {
+                palette: {
+                    primary: {
+                        main: '#1967d2',
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
