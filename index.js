@@ -11,8 +11,6 @@ import 'react-quill/dist/quill.snow.css'; // Needed to avoid css issue in plugin
 import annotationPlugins from 'mirador-annotation-editor';
 import { annotationAdapters } from 'mirador-annotation-editor';
 
-console.log(annotationAdapters);
-
 Mirador.viewer({
     annotation: {
         adapter: (canvasId) => new annotationAdapters.LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`, 'Anonymous User'),
