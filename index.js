@@ -8,12 +8,14 @@ import CustomMenuComponent from './CustomMenuComponent.jsx';
 
 // Mirador annotation editor
 import 'react-quill/dist/quill.snow.css'; // Needed to avoid css issue in plugin
-import annotationPlugins from 'mirador-annotation-editor'
-const LocalStorageAdapter = annotationPlugins.at(-1).LocalStorageAdapter;
+import annotationPlugins from 'mirador-annotation-editor';
+import { annotationAdapters } from 'mirador-annotation-editor';
+
+console.log(annotationAdapters);
 
 Mirador.viewer({
     annotation: {
-        adapter: (canvasId) => new LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`, 'Anonymous User'),
+        adapter: (canvasId) => new annotationAdapters.LocalStorageAdapter(`localStorage://?canvasId=${canvasId}`, 'Anonymous User'),
         allowTargetShapesStyling: true,
         commentTemplates: [{
             content: '<h4>Comment</h4><p>Comment content</p>',
