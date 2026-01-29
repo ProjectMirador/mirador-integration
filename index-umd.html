@@ -1,32 +1,28 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Basic Mirador: UMD / CDN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirador integration: ES Modules</title>
+    <link rel="stylesheet" href="./index.css" />
 </head>
 
 <body>
-    <div id="demo"></div>
-    <script src="https://unpkg.com/mirador@4.0.0/dist/mirador.min.js"></script>
-    <script>
-        // Mirador is now available as a global variable
-        Mirador.viewer({
-            id: 'demo',
-            windows: [{
-                imageToolsEnabled: true,
-                imageToolsOpen: true,
-                manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
-            }],
-            theme: {
-                palette: {
-                    primary: {
-                        main: '#1967d2',
-                    },
-                },
-            },
-        });
-    </script>
+<h1>Mirador Integration Demos (UMD / CDN)</h1>
+<p>Explore different implementations with community plugins</p>
+
+<ul>
+    <li>
+        <a href="demo/basic-umd.html">Basic Mirador Implementation</a>
+        <p class="description">A simple demonstration of Mirador's functionality with plugins adding image and sharing features.</p>
+    </li>
+
+    <li>
+        Mirador with Annotation Plugin (MAE)
+        <p class="description">This plugin not support UMD build currently. Available in ES Demo</p>
+    </li>
+</ul>
 </body>
 
 </html>
