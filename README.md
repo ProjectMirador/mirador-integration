@@ -14,7 +14,7 @@ The pages will load at `http://localhost:1234`.
 
 Plugins are not compatible with the UMD style of loading Mirador.
 In order to integrate Mirador with any plugins, you need to use our ES Module build.
-Refer to `index.js` for this setup -- here we integrate the `mirador-image-tools` plugin.
+Refer to `basic.js` for this setup -- here we integrate the `mirador-image-tools` plugin.
 
 ### Dependencies
 

@@ -2,9 +2,9 @@
 import Mirador from 'mirador';
 import { miradorImageToolsPlugin } from 'mirador-image-tools';
 import { miradorSharePlugin, miradorShareDialogPlugin } from 'mirador-share-plugin';
-import AnotherCustomMenuItem from './AnotherCustomMenuItem.jsx';
-import CustomMenuItem from './CustomMenuItem.jsx';
-import CustomMenuComponent from './CustomMenuComponent.jsx';
+import AnotherCustomMenuItem from './demo/Custom/AnotherCustomMenuItem.jsx';
+import CustomMenuItem from './demo/Custom/CustomMenuItem.jsx';
+import CustomMenuComponent from './demo/Custom/CustomMenuComponent.jsx';
 
 // Mirador annotation editor
 

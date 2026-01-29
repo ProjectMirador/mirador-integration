@@ -4,7 +4,7 @@ import Mirador from 'mirador';
 // Mirador annotation editor
 import 'react-quill/dist/quill.snow.css'; // Needed to avoid css issue in plugin
 import annotationPlugins from 'mirador-annotation-editor';
-import { annotationAdapters } from 'mirador-annotation-editor';
+import {annotationAdapters} from 'mirador-annotation-editor';
 
 Mirador.viewer({
     annotation: {
@@ -22,11 +22,14 @@ Mirador.viewer({
         readonly: false,
         tagsSuggestions: ['Mirador', 'Awesome', 'Viewer', 'IIIF', 'Template'],
     },
-
-    id: 'demo',
-    windows: [{
-        manifestId: 'https://purl.stanford.edu/sn904cj3429/iiif/manifest',
-    }],
+    windows: [
+        {
+            manifestId: "https://purl.stanford.edu/sn904cj3429/iiif/manifest",
+            sideBarOpen: true,
+            sideBarPanel: 'annotations'
+        }
+    ],
+²    id: 'demo',
     theme: {
         palette: {
             primary: {

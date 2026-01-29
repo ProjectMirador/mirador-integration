@@ -4,7 +4,7 @@
   "description": "Examples of integrating Mirador 4 with plugins",
   "private": true,
   "scripts": {
-    "serve": "rm -rf dist .parcel-cache && parcel index.html annotation.html",
+    "serve": "rm -rf dist .parcel-cache && parcel index.html ",
     "serve-umd": "rm -rf dist .parcel-cache && parcel index-umd.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
