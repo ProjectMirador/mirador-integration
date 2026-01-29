@@ -14,7 +14,7 @@ The pages will load at `http://localhost:1234`.
 
 Plugins are not compatible with the UMD style of loading Mirador.
 In order to integrate Mirador with any plugins, you need to use our ES Module build.
-Refer to `basic.js` for this setup -- here we integrate the `mirador-image-tools` plugin.
+Refer to `demo/basic.js` for this setup -- here we integrate the `mirador-image-tools` plugin.
 
 ### Dependencies
 
@@ -59,7 +59,9 @@ export default {
 ```
 When it is included in the intializer, the target is already set.
 
-5. `AnotherCustomMenuItem.js`: Similar to `CustomMenuItem`, but targeting the default `WindowTopBarPluginMenu`. 
+5. `AnotherCustomMenuItem.js`: Similar to `CustomMenuItem`, but targeting the default `WindowTopBarPluginMenu`.
+
+6. `mirador-annotation-editor` : This plugin is loaded from NPM. It adds functionalities in annotation panel, add a IIIF storage adapter and an annotation companion window`.
 
 
 For more info on Mirador plugins please [visit Mirador](https://github.com/ProjectMirador/mirador/wiki/Architecture-overview-1:-Components,-containers,-and-plugins)! This repo is meant to be a demo, not a full explanation. 
