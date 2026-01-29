@@ -29,7 +29,7 @@ Mirador.viewer({
             sideBarPanel: 'annotations'
         }
     ],
-²    id: 'demo',
+    id: 'demo',
     theme: {
         palette: {
             primary: {
