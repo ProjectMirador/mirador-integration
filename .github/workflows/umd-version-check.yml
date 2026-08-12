@@ -1,0 +1,26 @@
+name: UMD version check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - package.json
+      - index-umd.html
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+      - run: npm install
+      - name: Check index-umd.html CDN version matches installed mirador version
+        run: |
+          installed=$(node -p "require('./node_modules/mirador/package.json').version")
+          pinned=$(grep -oP 'unpkg\.com/mirador@\K[^/]+' index-umd.html)
+          if [ "$installed" != "$pinned" ]; then
+            echo "index-umd.html is pinned to mirador@$pinned but the installed version is $installed"
+            exit 1
+          fi
