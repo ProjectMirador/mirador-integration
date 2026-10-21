@@ -16,7 +16,7 @@
     "@mui/material": "^7.0.0",
     "@mui/system": "^7.0.0",
     "mirador": "^4.1.0",
-    "mirador-annotation-editor": "1.2.1",
+    "mirador-annotation-editor": "1.3.1",
     "mirador-image-tools": "1.0.0",
     "mirador-share-plugin": "1.0.0",
     "prop-types": "^15.7.2",
